@@ -1,4 +1,4 @@
-# 🌟 SIPP - Social Impact Prediction Platform
+# SIPP - Social Impact Prediction Platform
 
 [![Python Version](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
@@ -11,32 +11,32 @@
 
 ---
 
-## 📌 Table of Contents
+## Table of Contents
 
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [System Architecture](#-system-architecture)
-- [Dataset Specifications](#-dataset-specifications)
-- [Machine Learning Pipeline](#-machine-learning-pipeline)
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [System Architecture](#system-architecture)
+- [Dataset Specifications](#dataset-specifications)
+- [Machine Learning Pipeline](#machine-learning-pipeline)
   - [Model Details](#model-details)
   - [Evaluation Metrics](#evaluation-metrics)
   - [Feature Coefficients](#feature-coefficients)
-- [GUI & Decision Engine](#-gui--decision-engine)
+- [GUI & Decision Engine](#gui--decision-engine)
   - [Impact Score Breakdown](#impact-score-breakdown)
   - [Qualitative Decision Matrix](#qualitative-decision-matrix)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Running the GUI Application](#running-the-gui-application)
   - [Retraining the Model](#retraining-the-model)
-- [Roadmap & Enhancements](#-roadmap--enhancements)
-- [Contributing](#-contributing)
-- [Author & Acknowledgments](#-author--acknowledgments)
+- [Roadmap & Enhancements](#roadmap--enhancements)
+- [Contributing](#contributing)
+- [Author & Acknowledgments](#author--acknowledgments)
 
 ---
 
-## 📖 Overview
+## Overview
 
 Governments, NGOs, CSR (Corporate Social Responsibility) committees, and municipal bodies frequently allocate significant capital toward public welfare and development projects. However, assessing which initiatives will yield the highest community return on investment before deployment remains a challenge.
 
@@ -47,17 +47,17 @@ Governments, NGOs, CSR (Corporate Social Responsibility) committees, and municip
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- **🎯 Predictive Impact Modeling:** Uses a trained multivariate Linear Regression model with an **$R^2$ score of ~0.926**, mapping project inputs directly to social outcomes.
-- **🖥️ Interactive Desktop GUI:** Built with Python's native `Tkinter` and `ttk` framework, featuring a responsive, user-friendly layout.
-- **📊 Embedded Visual Analytics:** Live Matplotlib canvas dynamically renders district impact metrics on a standardized 0–100 scale bar chart.
-- **⚖️ Automated Pros & Cons Evaluation:** Rule-based decision logic interprets numerical scores into clear strategic takeaways (sustainability, cost feasibility, and public interest).
-- **📂 Clean & Modular Pipeline:** Decoupled training pipeline (`src/pro.py`) and inference interface (`src/predict_gui.py`) with serialized model artifacts (`joblib`).
+- **Predictive Impact Modeling:** Uses a trained multivariate Linear Regression model with an **$R^2$ score of ~0.926**, mapping project inputs directly to social outcomes.
+- **Interactive Desktop GUI:** Built with Python's native `Tkinter` and `ttk` framework, featuring a responsive, user-friendly layout.
+- **Embedded Visual Analytics:** Live Matplotlib canvas dynamically renders district impact metrics on a standardized 0–100 scale bar chart.
+- **Automated Pros & Cons Evaluation:** Rule-based decision logic interprets numerical scores into clear strategic takeaways (sustainability, cost feasibility, and public interest).
+- **Clean & Modular Pipeline:** Decoupled training pipeline (`src/pro.py`) and inference interface (`src/predict_gui.py`) with serialized model artifacts (`joblib`).
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```mermaid
 graph TD
@@ -78,7 +78,7 @@ graph TD
 
 ---
 
-## 📊 Dataset Specifications
+## Dataset Specifications
 
 The platform is trained on structured project records (`data/synthetic_dataset_with_districts.csv`) capturing key project parameters across administrative districts in central India:
 
@@ -103,7 +103,7 @@ The platform is trained on structured project records (`data/synthetic_dataset_w
 
 ---
 
-## 🤖 Machine Learning Pipeline
+## Machine Learning Pipeline
 
 ### Model Details
 The underlying engine uses an **Ordinary Least Squares (OLS) Linear Regression** model implemented via `scikit-learn`:
@@ -141,7 +141,7 @@ Impact_Score = (
 
 ---
 
-## 🖥️ GUI & Decision Engine
+## GUI & Decision Engine
 
 The graphical interface (`src/predict_gui.py`) is styled with a modern, distraction-free neutral theme (`#f5f5f5`) and includes:
 
@@ -162,19 +162,19 @@ The graphical interface (`src/predict_gui.py`) is styled with a modern, distract
           societal impact)      policy hurdles)           public benefits)
 ```
 
-- **🟢 High Impact (> 70):**
+- **High Impact (> 70):**
   - **Pros:** High sustainability, good public acceptance, strong economic benefits.
   - **Cons:** High initial investment may be required.
-- **🟡 Moderate Impact (40 to 70):**
+- **Moderate Impact (40 to 70):**
   - **Pros:** Balanced benefits, moderate success expected.
   - **Cons:** Some sustainability concerns or policy hurdles may arise.
-- **🔴 Low Impact (≤ 40):**
+- **Low Impact (≤ 40):**
   - **Pros:** Cost-effective in the short term.
   - **Cons:** Low impact, sustainability, and public interest issues.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 SIPP_/
@@ -192,7 +192,7 @@ SIPP_/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -249,7 +249,7 @@ Upon completion, the updated model will be saved to `models/impact_model.pkl`.
 
 ---
 
-## 🗺️ Roadmap & Enhancements
+## Roadmap & Enhancements
 
 - [ ] **Web Application:** Port the Tkinter interface to a modern web application using **Streamlit** or **FastAPI + React/Next.js**.
 - [ ] **Advanced ML Algorithms:** Benchmark against ensemble methods (**Random Forest Regressor**, **Gradient Boosting**, **XGBoost**) and hyperparameter tuning.
@@ -259,7 +259,7 @@ Upon completion, the updated model will be saved to `models/impact_model.pkl`.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues, and feature requests are welcome!
 
@@ -271,7 +271,7 @@ Contributions, issues, and feature requests are welcome!
 
 ---
 
-## 👤 Author & Acknowledgments
+## Author & Acknowledgments
 
 - **Author:** [Vaishnav Sreekumar](https://github.com/VaishnavSreekumar)
 - **Repository:** [VaishnavSreekumar/SIPP_](https://github.com/VaishnavSreekumar/SIPP_)
