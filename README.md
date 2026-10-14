@@ -108,7 +108,18 @@ The platform is trained on structured project records (`data/synthetic_dataset_w
 ### Model Details
 The underlying engine uses an **Ordinary Least Squares (OLS) Linear Regression** model implemented via `scikit-learn`:
 
-$$\text{Impact\_Score} = \beta_0 + \beta_1(\text{Budget}) + \beta_2(\text{Target\_Audience}) + \beta_3(\text{Location}) + \beta_4(\text{Sustainability\_Factors})$$
+$$\text{Impact Score} = \beta_0 + \beta_1(\text{Budget}) + \beta_2(\text{Target Audience}) + \beta_3(\text{Location}) + \beta_4(\text{Sustainability Factors})$$
+
+```python
+# Empirical Regression Formula:
+Impact_Score = (
+    -4.8591
+    + (0.00005285 * Budget)
+    + (0.00207220 * Target_Audience)
+    - (0.76089057 * Location)
+    + (1.75527913 * Sustainability_Factors)
+)
+```
 
 ### Evaluation Metrics
 
@@ -151,13 +162,13 @@ The graphical interface (`src/predict_gui.py`) is styled with a modern, distract
           societal impact)      policy hurdles)           public benefits)
 ```
 
-- **🟢 High Impact ($> 70$):**
+- **🟢 High Impact (> 70):**
   - **Pros:** High sustainability, good public acceptance, strong economic benefits.
   - **Cons:** High initial investment may be required.
-- **🟡 Moderate Impact ($40 < \text{Score} \le 70$):**
+- **🟡 Moderate Impact (40 to 70):**
   - **Pros:** Balanced benefits, moderate success expected.
   - **Cons:** Some sustainability concerns or policy hurdles may arise.
-- **🔴 Low Impact ($\le 40$):**
+- **🔴 Low Impact (≤ 40):**
   - **Pros:** Cost-effective in the short term.
   - **Cons:** Low impact, sustainability, and public interest issues.
 
